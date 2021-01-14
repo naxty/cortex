@@ -784,7 +784,7 @@ func RequestMonitorContainer(api *spec.API) kcore.Container {
 		ImagePullPolicy: kcore.PullAlways,
 		Args:            []string{"-p", DefaultRequestMonitorPortStr, api.Name},
 		Ports: []kcore.ContainerPort{
-			{ContainerPort: DefaultRequestMonitorPortInt32},
+			{Name: "metrics", ContainerPort: DefaultRequestMonitorPortInt32},
 		},
 		Env:            getEnvVars(api, _requestMonitorContainerName),
 		EnvFrom:        baseEnvVars(),
