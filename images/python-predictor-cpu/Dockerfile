@@ -23,7 +23,7 @@ RUN locale-gen en_US.UTF-8
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US.UTF-8 LC_ALL=en_US.UTF-8
 
 ENV PATH=/opt/conda/bin:$PATH
-ENV PYTHONVERSION=3.6.9
+ENV PYTHONVERSION=3.7.0
 
 # conda needs an untainted base environment to function properly
 # that's why a new separate conda environment is created
